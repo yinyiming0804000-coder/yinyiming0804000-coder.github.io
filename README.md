@@ -1,3 +1,28 @@
+# yinyiming0804000 的个人博客
+
+- 博客地址：https://yinyiming0804000-coder.github.io/ （首次推送并部署成功后可访问）
+- 源码仓库：https://github.com/yinyiming0804000-coder/yinyiming0804000-coder.github.io
+- 基于 [nice-template](https://github.com/yejianqin61-cell/nice-template)，保留原有 Jekyll 布局。
+- 本地只编辑 HTML、CSS 和 Markdown；无需安装额外构建工具。
+- GitHub Pages 已设置为 GitHub Actions；工作流位于 `.github/workflows/pages.yml`，推送 `main` 后自动部署。
+
+## 检查并首次发布
+
+确认 `git diff` 和未跟踪文件内容后，在 PowerShell 执行：
+
+```powershell
+Set-Location D:\00\blog
+git status --short
+git diff
+git add -- .gitignore README.md _config.yml index.html about.md assets/style.css _layouts/default.html _posts/2026-10-08-first-post.md _posts/2026-10-24-building-my-blog.md
+git commit -m "Personalize Jekyll blog"
+git push -u origin main
+```
+
+首次发布会包含模板历史和现有 Pages 工作流。到仓库的 Actions 页面查看 `Build and deploy Jekyll site`，成功后访问博客网址。推送前网址可能显示 404。
+
+---
+
 # Markdown 个人博客模板
 
 这是一个不需要 Node.js、npm 或 React 的 Jekyll 静态博客模板。
